@@ -16,6 +16,7 @@ export default defineComponent({
    <header>
       <nav id="nav">
          <RouterLink to="/">Home</RouterLink>
+         <RouterLink to="totally-legit-page-lololol">404</RouterLink>
          <RouterLink 
             v-for="Destination in Destinations" 
             :key="Destination.id"
