@@ -9,28 +9,21 @@ export default defineComponent({
             type: String,
             required: true
         },
-        ExperienceName: {
-            type: String,
-            required: false,
-        }
     },
     computed: {
         Destination() {
             return DestinationStore().GetDestinationByName(this.DestinationName)
         }
     },
-    data() {
-        return {}
-    }
 })
 </script>
 
 <template>
-    <button @click="$router.push('/')">GO BACK</button>
-
     <div class="destination-details">
+        <button class="back-button" @click="$router.push('/')">BACK</button>
         <p>{{ Destination?.description }}</p>
         <img :src="`/images/${ Destination?.image }`" :alt="Destination?.name" />
+        
     </div>
 
     <RouterView />

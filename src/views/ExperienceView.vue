@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { DestinationStore } from '@/stores/DestinationStore';
-import ExperienceCard from '@/components/ExperienceCard.vue';
+import ImageCard from '@/components/ImageCard.vue';
 
 export default defineComponent({
     name: 'ExperienceView',
@@ -17,7 +17,7 @@ export default defineComponent({
         }
     },
     components: {
-        ExperienceCard
+        ImageCard
     }
 })
 </script>
@@ -26,7 +26,7 @@ export default defineComponent({
     <div class="experiences">
         <div class="cards">
             <RouterLink v-for="Experience in Experiences" :key="Experience.name" :to="{name: 'experience', params: { ExperienceName: Experience.name }}">
-                <ExperienceCard :Experience="Experience" />
+                <ImageCard :ObjectData="Experience" />
             </RouterLink>
         </div>
     </div>

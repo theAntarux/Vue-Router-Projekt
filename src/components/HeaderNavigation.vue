@@ -3,7 +3,7 @@ import { defineComponent } from 'vue'
 import { DestinationStore } from '@/stores/DestinationStore';
 
 export default defineComponent({
-    name: 'TheNavigation',
+    name: 'HeaderNavigation',
     computed: {
       Destinations() {
          return DestinationStore().GetDestinations()

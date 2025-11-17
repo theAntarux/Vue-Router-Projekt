@@ -17,7 +17,7 @@ const router = createRouter({
       name: 'destination',
       component: DestinationView,
       props: true,
-      redirect: { name: 'experiences' },
+      redirect: { name: 'experiences' }, // Found this in docs as a fix, idk why but without redirect the page won't load the children upon render, only after page reload
       children: [
         {
           path: '',

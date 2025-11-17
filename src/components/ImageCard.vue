@@ -2,9 +2,9 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-    name: 'ExperienceCard',
+    name: 'ImageCard',
     props: {
-        Experience: {
+        ObjectData: {
             type: Object,
             required: true,
         }
@@ -14,7 +14,7 @@ export default defineComponent({
 
 <template>
     <div class="card">
-        <img :src="`/images/${ Experience.image }`" :alt="Experience.name" />
-        <div class="card_text">{{ Experience.name }}</div>
+        <img :src="`/images/${ ObjectData.image }`" :alt="ObjectData.name" />
+        <div class="card_text">{{ ObjectData.name }}</div>
     </div>
 </template>

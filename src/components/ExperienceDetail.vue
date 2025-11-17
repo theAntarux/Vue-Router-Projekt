@@ -23,9 +23,9 @@ export default defineComponent({
 </script>
 
 <template>
-    <div class="experiences">
+    <div class="experience-details">
+        <button class="back-button" @click="$router.back()">BACK TO EXPERIENCES</button>
         <img :src="`/images/${ Experience?.image }`" :alt="Experience?.name" />
-        <div class="experience-details">{{ Experience?.description }}</div>
-        <button @click="$router.back()">GO BACK TO EXPERIENCES</button>
+        <p>{{ Experience?.description }}</p>
     </div>
 </template>

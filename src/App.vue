@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import TheNavigation from './components/TheNavigation.vue';
+import HeaderNavigation from '@/components/HeaderNavigation.vue';
 </script>
 
 <template>
-  <TheNavigation />
+  <HeaderNavigation />
 </template>
