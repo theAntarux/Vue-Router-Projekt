@@ -31,5 +31,9 @@ export const DestinationStore = defineStore('DestinationStore', () => {
         return DestinationsReference.value.find((Destination) => Destination.name === Name) || null
     }
 
-    return { DestinationsReference, GetDestinationByName }
+    const GetDestinations = (): Destination[] => {
+        return DestinationsReference.value
+    }
+
+    return { GetDestinationByName, GetDestinations }
 })
