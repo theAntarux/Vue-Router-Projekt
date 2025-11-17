@@ -1,7 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { DestinationStore } from '@/stores/DestinationStore';
-import ExperienceView from '@/views/ExperienceView.vue';
 
 export default defineComponent({
     name: 'DestinationView',
@@ -9,6 +8,10 @@ export default defineComponent({
         DestinationName: {
             type: String,
             required: true
+        },
+        ExperienceName: {
+            type: String,
+            required: false,
         }
     },
     computed: {
@@ -16,17 +19,19 @@ export default defineComponent({
             return DestinationStore().GetDestinationByName(this.DestinationName)
         }
     },
-    components: {
-        ExperienceView
+    data() {
+        return {}
     }
 })
 </script>
 
 <template>
     <button @click="$router.back()">GO BACK</button>
+
     <div class="destination-details">
         <p>{{ Destination?.description }}</p>
         <img :src="`/images/${ Destination?.image }`" :alt="Destination?.name" />
     </div>
-    <ExperienceView />
+
+    <RouterView />
 </template>

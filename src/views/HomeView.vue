@@ -20,7 +20,7 @@ export default defineComponent({
                 <RouterLink
                     v-for="Destination in Destinations"
                     :key="Destination.id"
-                    :to="{name: 'destination', params: { DestinationName: Destination.name }}"
+                    :to="{name: 'experiences', params: { DestinationName: Destination.name }}"
                 >
                 <img :src="`/images/${ Destination.image }`" :alt="Destination.name" />
                 </RouterLink>
