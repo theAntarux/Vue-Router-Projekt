@@ -3,6 +3,7 @@ import HomeView from '@/views/HomeView.vue'
 import DestinationView from '@/views/DestinationView.vue'
 import ExperienceView from '@/views/ExperienceView.vue'
 import ExperienceDetail from '@/components/ExperienceDetail.vue'
+import PageNotFound from '@/views/PageNotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
           props: true
         }
       ]
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'notfound',
+      component: PageNotFound
     }
   ],
 })
