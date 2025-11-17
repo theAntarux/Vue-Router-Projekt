@@ -13,16 +13,18 @@ export default defineComponent({
 </script>
 
 <template>
-    <div class="home">
-        <h1>All Destinations</h1>
-        <div class="destinations">
-            <RouterLink
-               v-for="Destination in Destinations"
-               :key="Destination.id"
-               :to="{name: 'destination', params: { DestinationName: Destination.name }}"
-            >
-            <img :src="`/images/${ Destination.image }`" :alt="Destination.name" />
-            </RouterLink>
+    <main>
+        <div class="home">
+            <h1>All Destinations</h1>
+            <div class="destinations">
+                <RouterLink
+                    v-for="Destination in Destinations"
+                    :key="Destination.id"
+                    :to="{name: 'destination', params: { DestinationName: Destination.name }}"
+                >
+                <img :src="`/images/${ Destination.image }`" :alt="Destination.name" />
+                </RouterLink>
+            </div>
         </div>
-    </div>
+    </main>
 </template>

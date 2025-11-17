@@ -2,6 +2,7 @@ import { defineStore } from "pinia"
 import { ref } from 'vue'
 import DestinationsData from '@/assets/data.json'
 
+// Dear lord why am I even doing types for this exercise lololol
 type Experiences = {
     name: string
     slug: string
