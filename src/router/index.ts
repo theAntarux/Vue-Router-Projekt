@@ -17,6 +17,7 @@ const router = createRouter({
       name: 'destination',
       component: DestinationView,
       props: true,
+      redirect: { name: 'experiences' },
       children: [
         {
           path: '',

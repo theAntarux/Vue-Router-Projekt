@@ -26,7 +26,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <button @click="$router.back()">GO BACK</button>
+    <button @click="$router.push('/')">GO BACK</button>
 
     <div class="destination-details">
         <p>{{ Destination?.description }}</p>
