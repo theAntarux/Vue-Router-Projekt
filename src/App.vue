@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TheNavigation from './components/TheNavigation.vue';
+</script>
 
 <template>
-  <p> lorem ipsum i guess lmao </p>
+  <TheNavigation />
 </template>
